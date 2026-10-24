@@ -66,25 +66,17 @@ To run the project locally:
 1. Clone the repository:
 
    ```bash
-   git clone YOUR_REPOSITORY_URL
+   git clone https://github.com/Asadullo-dev/Uzum-market-clone.git
    ```
 
 2. Open the project folder:
 
    ```bash
-   cd YOUR_PROJECT_FOLDER
+   cd Uzum-Market
    ```
-
-3. Install dependencies if required:
-
+3. Run the file
    ```bash
-   npm install
-   ```
-
-4. Start the development server if the project uses a compatible setup:
-
-   ```bash
-   npm run dev
+   running index.html
    ```
 
 ## 🎯 Project Goals

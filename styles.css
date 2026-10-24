@@ -1,0 +1,544 @@
+/* ===== Umumiy sozlamalar ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #1F2026;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+}
+.icon--16 { width: 16px; height: 16px; }
+.icon--18 { width: 18px; height: 18px; }
+.icon--20 { width: 20px; height: 20px; }
+.icon--24 { width: 24px; height: 24px; }
+.icon--round { border-radius: 50%; }
+
+.underline {
+  text-decoration: underline;
+}
+
+/* ===== Header umumiy ===== */
+.site-header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #E4E7EC;
+}
+
+/* ===== 1. Yuqori panel ===== */
+.top-bar {
+  background: #F2F4F7;
+  font-size: 13px;
+}
+
+.top-bar__inner {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.top-bar__left,
+.top-bar__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.top-bar__center {
+  flex: 1;
+  text-align: center;
+  min-width: 0;
+}
+
+.top-bar__note {
+  color: #8C93A2;
+  white-space: nowrap;
+}
+
+.top-bar__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #1F2026;
+  white-space: nowrap;
+}
+
+.top-bar__link--city {
+  font-weight: 400;
+}
+
+.top-bar__link--lang {
+  font-weight: 500;
+}
+
+/* ===== 2. Asosiy panel (logo / katalog / qidiruv / harakatlar) ===== */
+.main-bar__inner {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo__img {
+  height: 32px;
+  width: auto;
+}
+
+.catalog-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 16px;
+  background: #F0F0FF;
+  color: #7000FF;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  min-width: 0;
+  border: 1px solid #E4E7EC;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.search__input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 16px;
+  font-size: 15px;
+  color: #1F2026;
+}
+
+.search__input::placeholder {
+  color: #8C93A2;
+}
+
+.search__btn {
+  height: 100%;
+  width: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F2F4F7;
+  border: none;
+  flex-shrink: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.actions__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* ===== 3. Kategoriyalar paneli ===== */
+.categories-bar__inner {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 0 24px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+
+.categories__item {
+  font-size: 14px;
+  color: #6B7280;
+  white-space: nowrap;
+}
+
+.categories__item--accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #1F2026;
+  font-weight: 600;
+}
+
+.categories__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  color: #6B7280;
+  font-size: 14px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* ===== 4. Arzon narxlar sarlavhasi ===== */
+.cheap{
+    margin: 24px;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+}
+
+/* ===== 5. Card ===== */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 0 24px 24px;
+  justify-content: space-between;
+}
+
+.card {
+  position: relative;
+  width: 232px;
+  border-radius: 12px;
+  border: 1px solid #E4E7EC;
+  background: #fff;
+  padding: 12px 12px 16px;
+  font-size: 13px;
+}
+
+.card__top {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #F2F4F7;
+}
+
+.yog {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  padding: 8px 0;
+}
+
+.badge-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #FFFF00;
+  color: #1F2026;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transform: rotate(-6deg);
+  z-index: 2;
+}
+
+.fav-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.badge-exclusive {
+  display: inline-block;
+  margin-top: 10px;
+  background: #7000FF;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.boxp {
+  margin: 10px 0 6px;
+  font-size: 13px;
+  line-height: 1.35;
+  color: #1F2026;
+}
+
+.star {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.smal {
+  color: #8B8E99;
+}
+
+.small {
+  font-size: 11.2px;
+}
+
+.rating-box {
+  margin-bottom: 8px;
+}
+
+.oylik {
+  display: inline-block;
+  background: #FFFF00;
+  color: #1F2026;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.narxlar {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.narxlar p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1F2026;
+}
+
+.card-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.card-btn button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #E4E7EC;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ===== 6. Yana ko'rsatish tugmasi ===== */
+.show-more-wrap {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 0 24px 32px;
+}
+
+.show-more-btn {
+  width: 100%;
+  height: 48px;
+  background: #F2F4F7;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1F2026;
+}
+
+.show-more-btn:hover {
+  background: #E4E7EC;
+}
+
+/* ===== 7. Footer ===== */
+.site-footer {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 40px 24px 24px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 32px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 160px;
+}
+
+.footer-col--apps {
+  min-width: 220px;
+}
+
+.footer-col__title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1F2026;
+}
+
+.footer-col__title--social {
+  margin-top: 8px;
+}
+
+.footer-col__link {
+  font-size: 13px;
+  color: #8C93A2;
+}
+
+.footer-col__link:hover {
+  color: #1F2026;
+}
+
+.footer-apps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-apps__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #1F2026;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-social__item {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social__item--instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.footer-social__item--telegram { background: #26A5E4; }
+.footer-social__item--youtube { background: #FF0000; }
+.footer-social__item--facebook { background: #1877F2; }
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid #E4E7EC;
+}
+
+.footer-bottom__links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-bottom__link {
+  font-size: 13px;
+  color: #1F2026;
+}
+
+.footer-bottom__copy {
+  margin: 0;
+  font-size: 12px;
+  color: #8C93A2;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .top-bar__center {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar__inner {
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+  .main-bar__inner {
+    flex-wrap: wrap;
+  }
+  .search {
+    order: 3;
+    width: 100%;
+  }
+  .categories {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .categories-bar__inner {
+    justify-content: flex-start;
+  }
+  .footer-links {
+    gap: 24px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

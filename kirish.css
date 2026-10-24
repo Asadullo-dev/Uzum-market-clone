@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.auth-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px 32px;
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    position: relative;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f2f2f4;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #808080;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.logo svg {
+    width: 28px;
+    height: 28px;
+    color: #7000ff;
+}
+
+.logo span {
+    font-size: 22px;
+    font-weight: 500;
+    color: #7000ff;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1f2026;
+    margin-bottom: 24px;
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    background-color: #f2f4f7;
+    border-radius: 12px;
+    font-size: 18px;
+    color: #1f2026;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #a0a5b1;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #7000ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 32px;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #5e00db;
+}
+
+.terms {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #595b66;
+    margin-bottom: 16px;
+    padding: 0 10px;
+}
+
+.terms a {
+    color: #1f2026;
+    text-decoration: underline;
+}
+
+.info-link {
+    display: inline-block;
+    font-size: 14px;
+    color: #595b66;
+    text-decoration: underline;
+}
